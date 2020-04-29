@@ -36,6 +36,6 @@ public class AppUserDetailsService implements UserDetailsService{
         authUser.setUsername(userDTO.getName());
         authUser.setPassword(userDTO.getPassword());
         authUser.setPhoneNumber(userDTO.getPhone());
-        return null;
+        return authUser;
     }
 }
