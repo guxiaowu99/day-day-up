@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>day-day-up</artifactId>
+        <groupId>com.study</groupId>
+        <version>1.0.0.SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>study-core</artifactId>
+    <version>${myProject.version}</version>
+
+    <properties>
+        <mapstruct.version>1.3.0.Final</mapstruct.version>
+    </properties>
+
+    <dependencies>
+        <!-- 依赖内部模块 -->
+        <dependency>
+            <groupId>com.study</groupId>
+            <artifactId>study-api</artifactId>
+            <version>${myProject.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.study</groupId>
+            <artifactId>study-common</artifactId>
+            <version>${myProject.version}</version>
+        </dependency>
+
+        <!-- 来处理 domin 实体类与 model 类的属性映射 -->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
