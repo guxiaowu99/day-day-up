@@ -12,7 +12,22 @@ public enum ServiceErrorEnum {
     /**
      * 账号不存在
      */
-    USER_DOES_NOT_EXISTS(20100,"User does not exists", "用户账号不存在")
+    USER_DOES_NOT_EXISTS(20100,"User does not exists", "用户账号不存在"),
+
+    /**
+     * 用户已被禁用
+     */
+    USER_DISABLED(20101,"User disable", "用户已被禁用"),
+
+    /**
+     * 账号已被锁定
+     */
+    USER_LOCKED(20102,"User locked", "账号已被锁定"),
+
+    /**
+     * 账号和密码不匹配
+     */
+    INVALID_PASSWORD(20103,"Username or password error", "用户名或密码不匹配"),
     ;
 
     /**
