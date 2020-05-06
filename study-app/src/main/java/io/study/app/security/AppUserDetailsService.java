@@ -2,6 +2,7 @@ package io.study.app.security;
 
 import io.study.api.user.dto.UserDTO;
 import io.study.api.user.service.UserServiceApi;
+import io.study.common.enums.UserStatusEnum;
 import io.study.common.exception.ServiceErrorEnum;
 import io.study.common.model.AuthUser;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +37,11 @@ public class AppUserDetailsService implements UserDetailsService{
         authUser.setUsername(userDTO.getName());
         authUser.setPassword(userDTO.getPassword());
         authUser.setPhoneNumber(userDTO.getPhone());
+        authUser.setAccountNonExpired(true);
+        authUser.setAccountNonLocked(!Objects.equals(userDTO.getStatus(), UserStatusEnum.LOCKED.getStatus()));
+        authUser.setCredentialsNonExpired(true);
+        authUser.setEnabled(!Objects.equals(userDTO.getStatus(), UserStatusEnum.DISABLED.getStatus()));
+
         return authUser;
     }
 }

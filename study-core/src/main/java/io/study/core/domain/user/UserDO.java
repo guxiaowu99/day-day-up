@@ -54,10 +54,10 @@ public class UserDO {
     private Date deleteTime;
 
     /**
-     * 状态 0:正常  1:删除
+     * 状态 0:正常  1:删除  2-锁定
      */
     @TableId(value = "status")
-    private Byte status;
+    private Integer status;
 
     /**
      * 版本号

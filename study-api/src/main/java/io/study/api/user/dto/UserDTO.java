@@ -1,5 +1,6 @@
 package io.study.api.user.dto;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 /**
@@ -28,5 +29,11 @@ public class UserDTO {
      * 密码
      */
     private String password;
+
+
+    /**
+     * 状态 0:正常  1:删除  2-锁定
+     */
+    private Integer status;
 
 }
